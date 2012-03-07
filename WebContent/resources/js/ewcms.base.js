@@ -323,8 +323,7 @@ function EwcmsOperate(){
 	    if(typeof(iframeID) == 'undefined'|| iframeID == '')iframeID = 'editifr';
 	    window.frames[iframeID].document.forms[0].submit();
 	    var selections = window.frames[iframeID].document.getElementById('selections');
-	    alert(selections);
-	    if(selections == null || selections == ''){
+	    if(selections == null || selections.value == ''){
 	    	$.messager.alert('提示','记录提交完成','info');
 	    	queryReload(true);
 	    }
