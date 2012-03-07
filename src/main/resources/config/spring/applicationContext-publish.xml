@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    
+    <bean id="configurationFactoryBean" class="com.ewcms.publication.freemarker.EwcmsConfigurationFactoryBean">
+        <property name="defaultEncoding" value = "UTF-8"/>
+    </bean>
+    
+    <bean id="preview" class="com.ewcms.publication.preview.PreviewServiceFactoryBean" autowire="byType"/>
+    
+    <bean id="publishService" class="com.ewcms.publication.PublishServiceFactoryBean" autowire="byType"/>
+    
+    <bean id="schedulePublishFac" class="com.ewcms.publication.SchedulePublishFac" autowire="byType"/>
+    
+    <bean id="webPublishFac" class="com.ewcms.publication.WebPublishFac" autowire="byType"/>
+    
+</beans>
